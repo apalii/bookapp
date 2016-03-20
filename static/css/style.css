@@ -1,0 +1,270 @@
+* {
+    outline:none;
+}
+html {
+    height: 100%;
+}
+body {
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+}
+p {
+    margin-top: 0;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    padding-left: 0;
+}
+
+.clearfix:before, .clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+.clearfix:after {
+    clear: both;
+}
+li {
+    list-style-type: none;
+}
+.wrapper {
+    margin:0 auto;
+    text-align: center;
+    margin: 0 40px;
+}
+header {
+    background: #e8e8e8;
+    background: -moz-linear-gradient(top, #E8E8FF 0%, #D3D3D7 100%);
+    background: -webkit-linear-gradient(top, #E8E8FF 0%,#D3D3D7 100%);
+    background: linear-gradient(to bottom, #E8E8FF 0%,#D3D3D7 100%);
+    padding: 6px 40px 0px;
+    margin-bottom: 30px;
+}
+.logo {
+    cursor: pointer;
+    width: 14.5%;
+}
+.pic_logo {
+    width:70px;
+    float: left;
+    margin-right: 20px;
+}
+.text_logo {
+    float: left;
+}
+.search,.info{
+    height: 40px;
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    cursor: pointer;
+}
+.search {
+    right:110px;
+}
+
+#block {
+    margin: 0 auto;
+    margin-top:150px;
+    width:20%;
+    background-color: #ccc;
+    border-radius:10px;
+    padding:10px;
+    background: #e3f0f4; /* Old browsers */
+    background: -moz-linear-gradient(top,  #e3f0f4 0%, #b0b8c4 100%);
+    background: -webkit-linear-gradient(top,  #e3f0f4 0%,#b0b8c4 100%);
+    background: linear-gradient(to bottom,  #e3f0f4 0%,#b0b8c4 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3f0f4', endColorstr='#b0b8c4',GradientType=0 );
+    margin-bottom:40px;
+    position:relative;
+}
+img {
+    max-height: 250px;
+}
+ul > div {ax
+    text-align: left;
+}
+.previewImage {
+    max-width: 180px;
+    float: left;
+    border-radius: 20px;
+    margin-right: 50px;
+    padding: 10px;
+    height: 270px;
+    width: 200px;
+}
+.booksTitle {
+    width:50%;
+    padding: 10px 10px 52px 10px;
+    box-sizing:border-box;
+    border-radius:10px;
+    margin-bottom: 30px;
+    background: #e8e8e8;
+    background: -moz-linear-gradient(top,  #E8E8FF 0%, #D3D3D7 100%);
+    background: -webkit-linear-gradient(top,  #E8E8FF 0%,#D3D3D7 100%);
+    background: linear-gradient(to bottom,  #E8E8FF 0%,#D3D3D7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#d3d3d3',GradientType=0 );
+}
+.pages {
+    display: inline-block;
+}
+.booksTitle p {
+    text-align: left;
+}
+.bookname {
+    margin-bottom: 164px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.readmore {
+    letter-spacing: 0.8px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    float: right;
+    margin-right: 10px;
+    padding: 7px 16px;
+    background: #dd6d39; /* Old browsers */
+    background: -moz-linear-gradient(top,  #dd6d39 0%, #c64d21 100%);
+    background: -webkit-linear-gradient(top,  #dd6d39 0%,#c64d21 100%);
+    background: linear-gradient(to bottom,  #dd6d39 0%,#c64d21 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd6d39', endColorstr='#c64d21',GradientType=0 );
+    margin-bottom: 10px;
+}
+.pages {
+    float:left;
+    margin-top: 12px;
+    margin-bottom: 0;
+
+}
+.authorname {
+    color: #5f5f5f;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+form {
+    margin-top: 15px;
+    position:relative;
+    position: absolute;
+    left: 45%;
+}
+input[type='search'] {
+    padding: 6px 5px 6px 25px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.mini-search {
+    width: 18px;
+    position: absolute;
+    left: 5px;
+    top: 4px;
+    border:none;
+}
+.description {
+    padding: 50px 10px 0;
+}
+.added-bg {
+    background: #3baa22; /* Old browsers */
+    background: -moz-linear-gradient(top,  #3baa22 0%, #426b39 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #3baa22 0%,#426b39 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #3baa22 0%,#426b39 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3baa22', endColorstr='#426b39',GradientType=0 ); /* IE6-9 */
+}
+/****** Style Star Rating Widget *****/
+
+.rating {
+    border: none;
+    float: left;
+    margin-top: -46px;
+    padding-left: 0;
+    margin-left: -4px;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.rating > .half:before {
+    content: "\f089";
+    position: absolute;
+}
+
+.rating > label {
+    color: #fff;
+    float: right;
+}
+
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #c64d21;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+/*Модальное окно*/
+
+#modal_form {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    background: #fff;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+    display: none;
+    opacity: 0;
+    z-index: 5;
+    padding: 20px 10px;
+}
+
+
+#modal_form #modal_close {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: block;
+}
+
+#overlay {
+    z-index:3;
+    position:fixed;
+    background-color:#000;
+    opacity:0.8;
+    -moz-opacity:0.8;
+    filter:alpha(opacity=80);
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    cursor:pointer;
+    display:none;
+}
+
+.modal-logo{
+    margin-left: 50px;
+    margin-top: 17px;
+}
+.modal-logo >.pic_logo  {
+    margin-top:10px;
+}
+
+
+

@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+{% if authors %}
+    {% for author in authors %}
+        {{ author.name }} {{ author.last_name }} {{ author.bio }}
+    {% endfor %}
+{% else %}
+    <p>There are no authors in the database. Please add new author</p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,87 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link href="{% static "css/style.css" %}" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+    {% block additional_css %}
+    {% endblock %}
+</head>
+<body>
+
+{% block content %}
+
+<header class="clearfix">
+    <div class="logo clearfix">
+        <img class = "pic_logo" src="static/img/pic.png" alt="logo">
+        <h3 class="text_logo">freeReader</h3>
+        <form class = "svg-form" action="/"><input type='search' id='searching'><img class='mini-search' src='static/img/tool.svg' alt='search'></form>
+    </div>
+    <div class="click-search">
+        <img class="search" src="static/img/tool.svg" alt="search">
+    </div>
+    <img class='info' id="go" src='static/img/circle.svg' alt='info'>
+    <a href="{% url "book_add" %}">Add new book</a>
+</header>
+
+<div class="wrapper">
+
+    <h1 id="block"><img src="static/img/pic.png" alt="logo" /><p>freeReader</p></h1>
+    <img id="loader" src="static/img/loader.gif" alt="loader">
+
+    <div id="update">
+    </div>
+
+    <div id="modal_form">
+        <div class="modal-wrap">
+            <span id="modal_close">X</span>
+            <div class="modal-logo clearfix">
+                <img class = "pic_logo" src="static/img/pic.png" alt="logo">
+                <h3 class="text_logo">freeReader <span>v 1.0</span></h3>
+            </div>
+            <p>Владимир Лысенко & Андрей Палий</p>
+            <a href="mailto:eaglelegendary@mail.ru?Subject=Hello%20again" target="_top">eaglelegendary@mail.ru</a>
+
+        </div>
+    </div>
+    <div id="overlay"></div>
+
+
+{% if books %}
+
+        {% for book in books %}
+        <div class="booksTitle">
+            <img class="previewImage"src={{ book.img.url }} alt={{ book.name }}>
+            <p class="authorname">{{ book.author }}</p>
+            <p class="bookname">{{ book.name }}</p>
+            <!--<p>pablished : {{ book.published }}</p>-->
+            <!--<p>rate: {{ book.rate }}/5</p>-->
+            <!--<p>added: {{ book.added }}</p>-->
+            <p class="pages">pages: {{ book.pages }}</p>
+            <!--<a href="{% url "book_edit" book.id %}">Edit book</a>-->
+             <p class="description">description : {{ book.description }}</p>
+        </div>
+        {% endfor %}
+{% else %}
+    <p>There are no books !</p>
+
+{% endif %}
+
+{% endblock %}
+
+</div>
+<script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
+<script src="{% static "js/app.js" %}"></script>
+{% block additional_js %}
+{% endblock %}
+</body>
+</html>
+
+
+
+
+
+
+
